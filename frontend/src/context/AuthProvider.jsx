@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
          console.log(token);
         if(token){
           const { data } = await axios.get(
-            "http://localhost:4001/api/users/my-profile",
+            "https://cilliblog.onrender.com/api/users/my-profile",
             { 
               withCredentials: true,
               headers: {'Content-Type': 'application/json'},
@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
       try {
         const { data } = await axios.get(
           
-          "http://localhost:4001/api/blogs/all-blogs",
+          "https://cilliblog.onrender.com/api/blogs/all-blogs",
           { withCredentials: true }
         );
         console.log(data);
